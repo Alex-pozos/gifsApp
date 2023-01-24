@@ -50,7 +50,7 @@ export class GifsService {
     const params = new HttpParams()
       .set('api_key', this.apikey)
       .set('q', query)
-      .set('limit', '10');
+      .set('limit', '15');
     console.log(params);
     // Se crea una peticion de tipo get con la comilas invertidas para poder poder inyectar informacion de la palabra que queremos que busque en la api absorbida 
     this.http.get<SearchGifsResponse>(`${this.servicioUrl}/search`, { params })
