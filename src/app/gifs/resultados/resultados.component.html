@@ -1,0 +1,25 @@
+<!-- <ul> 
+    <li *ngFor="let gif of resultados">
+        {{gif.title}}
+    </li>
+</ul> -->
+
+
+<div class="row">
+    <!-- el siguiente NgFor viene de la clase de resultados -->
+    <div *ngFor="let gif of resultados" class="col-md-4 col-sm-6 resultados" >
+
+        <div class="card mb-2">
+            <!-- SRC se encierra en llaves cuadradas dado que se va a ser referencia a la variable de gif del ngfor 
+            .image porque se toma del tipo que ser, .dowbsized_medium es para el tamaño que vamos a mostar y por 
+            ultimo el url de la peticion que viene. -->
+            <img [src]="gif.images.downsized_medium.url" [alt]="gif.title" class="card-img-top">
+            <div class="card-body">
+                <p class="card-text" style="text-align: center;">
+                    {{gif.title}}
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
